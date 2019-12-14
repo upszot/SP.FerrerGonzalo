@@ -20,10 +20,14 @@ window.addEventListener('load', function() {
     selRango = document.getElementById("radios");
     //console.log(selRango);
 
-     cargarSelect2(selRango, obtenerRango(datos));
+     //cargarSelect2(selRango, obtenerRango(datos));
     
+    for(var i = radios.length; i--; ) {
+        radios[i].onclick = filtrarDatos;
+    }
+
 //*********** no me funciona para actualizar la table con el filtro sin precionar el de transaccion */
-     selRango.addEventListener('change', filtrarDatos);
+     //selRango.addEventListener('change', filtrarDatos);
 
 });
 // window.addEventListener('load', function() {
